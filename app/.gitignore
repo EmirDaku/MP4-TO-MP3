@@ -1,0 +1,105 @@
+# ==========================================
+# 1. PYTHON & VIRTUAL ENVS
+# ==========================================
+# Prapaskena e Python-it dhe skedarët e kompiluar
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Dosjet virtuale (Virtual Environments)
+.venv/
+venv/
+ENV/
+env/
+.uv/
+
+# Pyinstaller / Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# 2. STREAMLIT & DOWNLOADS (Projekti yt)
+# ==========================================
+# Konfigurimet lokale të Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Skedarët e përkohshëm të shkarkuar gjatë testimeve lokale (.mp3, .mp4)
+*.mp3
+*.mp4
+*.webm
+*.m4a
+
+# ==========================================
+# 3. TERRAFORM (Shumë e rëndësishme për sigurinë)
+# ==========================================
+# State files (përmbajnë të dhëna sensistive në plain text!)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+crash.*.log
+
+# Dosja e moduleve dhe provider-ave
+.terraform/
+.terraform.lock.hcl
+
+# Skedarët me variabla sekrete të Terraform-it
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ==========================================
+# 4. DOCKER & KUBERNETES
+# ==========================================
+# Kesh-i i Docker-it dhe log-et
+.docker/
+*.log
+
+# Çelësat lokalë të kubeconfig (nëse ruan ndonjë credential lokal)
+kubeconfig
+*.kubeconfig
+
+# ==========================================
+# 5. ENVIRONMENT VARIABLES & SECRETS
+# ==========================================
+# Skedarët me çelësa sekretë lokalë
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+azure_credentials.json
+
+# ==========================================
+# 6. IDE / EDITORS & OS
+# ==========================================
+# VS Code & JetBrains (PyCharm/CLion)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+
+# Sistem Operativ (macOS / Windows)
+.DS_Store
+Thumbs.db
+ehthumbs.db
