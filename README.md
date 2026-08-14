@@ -63,29 +63,35 @@ Bash
 minikube start
 Step 2: Enable Metrics Server
 The metrics-server addon is required for the Horizontal Pod Autoscaler to collect CPU and memory metrics:
+```
 
-Bash
+```Bash
 minikube addons enable metrics-server
+```
 Verification: Wait approximately 30 seconds and confirm metrics collection is active:
 
-Bash
+```Bash
 kubectl top pods
+```
 Step 3: Deploy to Kubernetes
 Apply all manifests contained within the k8s/ directory in a single command:
 
-Bash
+```Bash
 kubectl apply -f k8s/
+```
 Alternatively, apply them individually:
 
-Bash
+```Bash
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 kubectl apply -f k8s/hpa.yaml
+```
 4. Accessing the Application
 Expose and open the Streamlit web application directly in your browser:
 
-Bash
+```Bash
 minikube service yt-downloader-service
+```
 5. Testing Horizontal Pod Autoscaler (HPA)
 To verify dynamic scaling under high CPU load:
 
