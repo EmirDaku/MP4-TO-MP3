@@ -15,3 +15,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./app
+          push: true
+          tags: |
+           ${{ secrets.DOCKERHUB_USERNAME }}/yt-downloader:latest
+           ${{ secrets.DOCKERHUB_USERNAME }}/yt-downloader:${{ github.sha }}
