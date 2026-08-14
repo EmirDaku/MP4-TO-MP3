@@ -32,7 +32,7 @@ yt-downloader-k8s/
 ├── youtube_downloader.py       # Main Streamlit application code
 └── README.md                   # Project documentation
 
-
+```
 
 🚀 Complete Setup & Operational Guide
 1. Prerequisites
@@ -97,14 +97,16 @@ To verify dynamic scaling under high CPU load:
 
 Monitor HPA status in real time (Terminal 1):
 
-Bash
+```Bash
 kubectl get hpa -w
+```
 Generate artificial load (Terminal 2):
 
 Run a temporary pod that generates continuous HTTP requests to the Streamlit service:
 
-Bash
+```Bash
 kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while true; do wget -q -O- http://yt-downloader-service:8501; done"
+```
 Expected Behavior:
 
 When CPU utilization exceeds 50%, HPA will automatically scale up REPLICAS from 3 to 5.
